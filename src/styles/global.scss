@@ -1,0 +1,18 @@
+body {
+  background: #dedede;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+  }
+  * {
+    font-family: "Nunito", sans-serif;
+  }
+}

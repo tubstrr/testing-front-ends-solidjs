@@ -1,14 +1,34 @@
-# Solid Hacker News
+## Usage
 
-Demo app based on [Vue Hackernews 2.0](https://github.com/vuejs/vue-hackernews-2.0). Uses Solid and Solid App Router.
+Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
-You can view it [here](https://hackernews-csr.ryansolid.workers.dev/).
+This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
 
-## Testing Locally:
-First, you'll need to clone this repo, then cd into the `solid-hackernews` folder
+```bash
+$ npm install # or pnpm install or yarn install
+```
 
-Then, run `npm install` to install all dependencies
+### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
 
-Lastly, run `npm run start` and the web-app will open in your default browser at `http://localhost:5000/`
+## Available Scripts
 
-Happy Hacking!
+In the project directory, you can run:
+
+### `npm run dev` or `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.<br>
+It correctly bundles Solid in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+## Deployment
+
+You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)

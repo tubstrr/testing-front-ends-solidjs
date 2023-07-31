@@ -1,25 +1,16 @@
+/* @refresh reload */
+import "../src/styles/main.scss";
 import { render } from "solid-js/web";
-import { Router, useRoutes } from "solid-app-router";
 
-import Nav from "./components/nav";
+import "./index.css";
+import App from "./App";
 
-import routes from "./routes";
+const root = document.getElementById("root");
 
-const Outlet = useRoutes(routes);
-
-render(
-  () => (
-    <Router routes={routes} root={process.env.PUBLIC_URL}>
-      <Nav />
-      <Outlet />
-    </Router>
-  ),
-  document.body
-);
-
-if ("serviceWorker" in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register(`${process.env.PUBLIC_URL}sw.js`);
-  });
+if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
+  throw new Error(
+    "Root element not found. Did you forget to add it to your index.html? Or maybe the id attribute got misspelled?"
+  );
 }
+
+render(() => <App />, root);
