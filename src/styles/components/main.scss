@@ -1,0 +1,118 @@
+.page {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 5px solid black;
+
+  .container {
+    position: relative;
+    min-height: 10rem;
+
+    .loading {
+      position: absolute;
+      width: calc(100% + 1rem);
+      height: calc(100% + 1rem);
+      display: flex;
+      top: -0.5rem;
+      left: -0.5rem;
+      background: rgba(222, 222, 222, 0.85);
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 0.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 0.5s;
+    }
+    .fade-enter-from,
+    .fade-leave-to {
+      opacity: 0;
+    }
+
+    ul {
+      li {
+        display: flex;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+
+        font-weight: bold;
+
+        .done,
+        .remove {
+          border: 1px solid black;
+          padding: 0.2rem;
+          border-radius: 0.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.5rem;
+          height: 1.5rem;
+          transform: 300ms;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .done {
+          margin-right: 0.5rem;
+        }
+        .remove {
+          margin-left: auto;
+          background-color: #dedede;
+        }
+
+        + li {
+          border-top: 1px solid black;
+        }
+      }
+    }
+
+    form {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      div {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 0.8rem;
+          margin-bottom: 0.25rem;
+        }
+        input {
+          border: 1px solid black;
+          padding: 0.2rem;
+          border-radius: 0.2rem;
+        }
+      }
+
+      button {
+        margin-left: 0.5rem;
+        border: 1px solid black;
+        background-color: #dedede;
+        padding: 0.2rem;
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        transform: 300ms;
+        padding: 0.25rem;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
