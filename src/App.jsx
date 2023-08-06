@@ -1,5 +1,6 @@
 import { onMount, createSignal, batch } from "solid-js";
 import { createLocalStore, removeIndex } from "../src/stores";
+import { HttpHeader } from "solid-start/server";
 
 function App() {
   onMount(async () => {
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <section className="page">
+      <HttpHeader name="Cache-Control" value="s-maxage=1, stale-while-revalidate=59" />
       <h1>Basic ToDo (Solid.js)</h1>
       <div className="container">
         <Show when={loading()}>
